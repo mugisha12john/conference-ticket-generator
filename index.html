@@ -46,10 +46,11 @@
       </div>
       <form>
         <label for="">Upload Avatar</label>
-        <div class="drag">
-          <div id="img">
+        <div id="dropArea" class="drag">
+          <label id="imgView">
+            <input type="file" id="fileInput" accept="image/png" hidden />
             <img src="./assets/images/icon-upload.svg" alt="" />
-          </div>
+          </label>
           <div id="drag-text"><p>Drag and drop or click to upload</p></div>
         </div>
         <div id="upload-error">
@@ -62,7 +63,7 @@
         <input type="email" placeholder="example@email.com" />
         <label for="">GitHub Username</label>
         <input type="text" placeholder=" @yourusername" />
-        <button>Generate My Ticket</button>
+        <button class="button">Generate My Ticket</button>
       </form>
     </div>
 

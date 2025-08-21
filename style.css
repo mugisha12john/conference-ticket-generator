@@ -98,7 +98,7 @@ body {
   cursor: pointer;
   background-color: rgba(128, 128, 128, 0.31);
 }
-.container form button {
+.container form .button {
   width: 300px;
   padding: 8px;
   background-color: var(--Orange500);
@@ -108,7 +108,7 @@ body {
   font-weight: var(--font-weight-bold);
   transition: 0.3ms ease-in;
 }
-.container form button:hover {
+.container form .button:hover {
   cursor: pointer;
   background-color: var(--Orange700);
 }
@@ -128,7 +128,6 @@ body {
   position: relative;
 }
 .drag:hover {
-  cursor: pointer;
   background-color: rgba(128, 128, 128, 0.31);
 }
 .container form #upload-error {
@@ -140,8 +139,10 @@ body {
   position: absolute;
   left: 20px;
   top: 50px;
+  display: flex;
+  gap: 5px;
 }
-.drag #img {
+.drag #imgView {
   position: absolute;
   left: 130px;
   top: 10px;
@@ -151,7 +152,38 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.removeBtn {
+  padding: 5px;
+  background-color: rgba(128, 128, 128, 0.31);
+  padding: 5px;
+  background-color: rgba(128, 128, 128, 0.31);
+  color: rgba(255, 255, 255, 0.461);
+  border: none;
+  border-radius: 7px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 100px;
+}
+.changeBtn {
+  padding: 5px;
+  background-color: rgba(128, 128, 128, 0.31);
+  color: rgba(255, 255, 255, 0.461);
+  border: none;
+  border-radius: 7px;
+  position: absolute;
+  left: 130px;
+  top: 10px;
+  width: 100px;
+}
+.removeBtn:hover {
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.218);
+}
+.changeBtn:hover {
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.218);
+}
 /* working card */
 
 .card {
