@@ -151,6 +151,12 @@ body {
   background-color: rgba(128, 128, 128, 0.31);
   display: flex;
   justify-content: center;
+  overflow: hidden;
+}
+.drag #imgView img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 .removeBtn {
   padding: 5px;
