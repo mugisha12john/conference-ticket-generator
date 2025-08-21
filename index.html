@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <!-- Form starts -->
+    <img
+      src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+      alt="pattern-1"
+      id="pattern-1"
+    />
+    <img
+      src="./assets/images/pattern-squiggly-line-top.svg"
+      alt="pattern-2"
+      id="pattern-2"
+    />
+    <img
+      src="./assets/images/pattern-circle.svg"
+      alt="pattern-3"
+      id="pattern-3"
+    />
+    <img
+      src="./assets/images/pattern-circle.svg"
+      alt="pattern-3"
+      id="pattern-4"
+    />
+    <div class="container">
+      <div class="title">
+        <img src="./assets/images/logo-full.svg" alt="company logo" />
+        <h2>
+          Your Journey to Coding Conf <br />
+          2025 Starts Here!
+        </h2>
+        <h4>Secure your spot at next year's biggest coding conference.</h4>
+      </div>
+      <form>
+        <label for="">Upload Avatar</label>
+        <div class="drag">
+          <div id="img">
+            <img src="./assets/images/icon-upload.svg" alt="" />
+          </div>
+          <div id="drag-text"><p>Drag and drop or click to upload</p></div>
+        </div>
+        <div id="upload-error">
+          <img src="./assets/images/icon-info.svg" alt="" />
+          <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+        </div>
+        <label for="">Full Name</label>
+        <input type="text" />
+        <label for="">Email Address</label>
+        <input type="email" placeholder="example@email.com" />
+        <label for="">GitHub Username</label>
+        <input type="text" placeholder=" @yourusername" />
+        <button>Generate My Ticket</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="title">
+        <img src="./assets/images/logo-full.svg" alt="company logo" />
+        <h2>
+          Congrats, Mugisha Buban<br />
+          Your ticket is ready.
+        </h2>
+        <h4>
+          We've emailed your ticket to <br />
+          jonatan@email.com and will send update in <br />
+          the run up to the event
+        </h4>
+      </div>
+      <div class="card-container">
+        <img
+          src="./assets/images/pattern-ticket.svg"
+          alt="card"
+          style="width: 600px; height: 200px"
+        />
+        <div class="card-detail">
+          <div class="card-title">
+            <img src="./assets/images/logo-full.svg" alt="" />
+            <p>Jan 31, 2025 / Austin, TX</p>
+          </div>
+
+          <div class="card-profile">
+            <img
+              src="./assets/images/image-avatar.jpg"
+              alt=""
+              id="profile-img"
+            />
+            <div>
+              <h4 class="card-name">Mugisha Buban</h4>
+              <div class="email">
+                <img src="./assets/images/icon-github.svg" alt="" />
+                <h5>@mugisha004gmail.com</h5>
+              </div>
+            </div>
+          </div>
+          <div class="code">
+            <h6>#074384</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

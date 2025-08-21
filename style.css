@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Neutral0: hsl(0, 0%, 100%);
+  --Neutral300: hsl(252, 6%, 83%);
+  --Neutral500: hsl(245, 15%, 58%);
+  --Neutral700: hsla(245, 19%, 35%, 0.356);
+  --Neutral900: hsl(248, 70%, 10%);
+  --Orange500: hsl(7, 88%, 67%);
+  --Orange700: hsl(7, 71%, 60%);
+  --FontsizeLabels: 20px;
+  --WidthMobile: 375px;
+  --WidthDesktop: 1440px;
+  --font-family-mono: "Inconsolata", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  width: var(--WidthDesktop);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("./assets/images/pattern-lines.svg"),
+    url("./assets/images/background-desktop.png");
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  font-family: var(--font-family-mono);
+  position: relative;
+  color: white;
+}
+#pattern-1 {
+  position: absolute;
+  left: 0;
+  top: 42.5%;
+}
+#pattern-2 {
+  position: absolute;
+  right: -25px;
+  top: 5%;
+}
+#pattern-3 {
+  position: absolute;
+  left: 30px;
+  top: -60px;
+  width: 150px;
+  height: 150px;
+}
+#pattern-4 {
+  position: absolute;
+  right: 380px;
+  width: 150px;
+  height: 150px;
+  top: 360px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  position: absolute;
+  top: 20px;
+  left: 400px;
+}
+.title {
+  text-align: center;
+}
+.title img {
+  width: 150px;
+}
+.container form {
+  margin-left: 200px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  text-align: left;
+}
+.container form input {
+  width: 300px;
+  padding: 8px;
+  background-color: var(--Neutral700);
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  color: var(--Neutral500);
+  transition: 0.6ms ease-in;
+}
+.container form input:hover {
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.31);
+}
+.container form button {
+  width: 300px;
+  padding: 8px;
+  background-color: var(--Orange500);
+  border-radius: 8px;
+  border: none;
+  color: var(--Neutral900);
+  font-weight: var(--font-weight-bold);
+  transition: 0.3ms ease-in;
+}
+.container form button:hover {
+  cursor: pointer;
+  background-color: var(--Orange700);
+}
+.container h2 {
+  font-weight: var(--font-weight-bold);
+  font-size: 36px;
+}
+.container h4 {
+  font-weight: 200;
+  font-size: 16px;
+}
+.drag {
+  width: 300px;
+  height: 100px;
+  border-radius: 7px;
+  border: 3px dotted gray;
+  position: relative;
+}
+.drag:hover {
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.31);
+}
+.container form #upload-error {
+  font-size: 9px;
+  display: flex;
+  gap: 3px;
+}
+.drag #drag-text {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+}
+.drag #img {
+  position: absolute;
+  left: 130px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(128, 128, 128, 0.31);
+  display: flex;
+  justify-content: center;
+}
+
+/* working card */
+
+.card {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  position: absolute;
+  top: 20px;
+  left: 400px;
+}
+.card .title {
+  text-align: center;
+}
+.card .title img {
+  width: 150px;
+}
+.card h2 {
+  font-size: 48px;
+  font-weight: var(--font-weight-bold);
+}
+.card h4 {
+  font-weight: 300;
+  font-size: 21px;
+}
+.card .card-container {
+  margin-top: 30px;
+  margin-left: 80px;
+  position: relative;
+}
+.card-container .card-detail {
+  position: absolute;
+  top: -40px;
+}
+.card-title {
+  position: absolute;
+  left: 110px;
+  top: 50px;
+}
+.card-profile {
+  position: absolute;
+  top: 170px;
+  left: 110px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.code {
+  transform: rotate(90deg);
+  font-size: 36px;
+  color: rgba(128, 128, 128, 0.817);
+  position: absolute;
+  left: 440px;
+  top: 70px;
+}
+#profile-img {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+}
+.card-name {
+  position: absolute;
+  top: -40px;
+}
+.email {
+  display: flex;
+}
+
+/* Mobile - 375px */
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background-position: top, center;
+    background-size: contain, cover;
+  }
+
+  .container {
+    width: 100%;
+    position: static;
+    margin: 20px auto;
+    padding: 0 16px;
+    align-items: center;
+  }
+
+  .title img {
+    width: 100px;
+  }
+
+  .container h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .container h4 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .container form {
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .container form input,
+  .container form button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .drag {
+    width: 100%;
+    max-width: 280px;
+    height: 80px;
+  }
+
+  #pattern-1 {
+    top: 65%;
+    left: -10px;
+    width: 80px;
+    height: 80px;
+  }
+  #pattern-2 {
+    top: -4%;
+    right: 0;
+    width: 60px;
+    height: 60px;
+  }
+  #pattern-3 {
+    top: -20px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+  }
+  #pattern-4 {
+    top: 70%;
+    right: 10px;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Tablet - up to 768px */
+@media (max-width: 768px) and (min-width: 376px) {
+  .container {
+    width: 90%;
+    left: auto;
+    right: auto;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+
+  .title img {
+    width: 120px;
+  }
+
+  .container h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .container h4 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .container form {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .container form input,
+  .container form button {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .drag {
+    width: 100%;
+    max-width: 350px;
+    height: 90px;
+  }
+
+  #pattern-1 {
+    top: 50%;
+    left: 0;
+    width: 120px;
+    height: 120px;
+  }
+  #pattern-2 {
+    top: 8%;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+  }
+  #pattern-3 {
+    top: -40px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+  }
+  #pattern-4 {
+    top: 300px;
+    right: 50px;
+    width: 120px;
+    height: 120px;
+  }
+}
