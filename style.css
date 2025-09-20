@@ -135,6 +135,13 @@ body {
   display: flex;
   gap: 3px;
 }
+.container form #error {
+  font-size: 9px;
+  display: flex;
+  gap: 3px;
+  color: rgb(227, 14, 14);
+  display: none;
+}
 .drag #drag-text {
   position: absolute;
   left: 20px;
@@ -156,7 +163,7 @@ body {
 .drag #imgView img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 .removeBtn {
   padding: 5px;
@@ -191,7 +198,6 @@ body {
   background-color: rgba(128, 128, 128, 0.218);
 }
 /* working card */
-
 .card {
   visibility: hidden;
   display: flex;
@@ -251,6 +257,7 @@ body {
   height: 50px;
 }
 .card-name {
+  width: 200px;
   position: absolute;
   top: -40px;
 }

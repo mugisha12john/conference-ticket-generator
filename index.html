@@ -48,7 +48,12 @@
         <label for="">Upload Avatar</label>
         <div id="dropArea" class="drag">
           <label id="imgView">
-            <input type="file" id="fileInput" accept="image/png, image/jpg" hidden />
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/png, image/jpg"
+              hidden
+            />
             <img src="./assets/images/icon-upload.svg" alt="" />
           </label>
           <div id="drag-text"><p>Drag and drop or click to upload</p></div>
@@ -58,12 +63,18 @@
           <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
         </div>
         <label for="">Full Name</label>
-        <input type="text" />
+        <input type="text" id="name" />
         <label for="">Email Address</label>
-        <input type="email" placeholder="example@email.com" />
+        <input type="email" id="email" placeholder="example@email.com" />
+        <div id="error">
+          <p>Please enter valid email.</p>
+        </div>
         <label for="">GitHub Username</label>
-        <input type="text" placeholder=" @yourusername" />
-        <button class="button">Generate My Ticket</button>
+        <input type="text" id="GitHub" placeholder=" @yourusername" />
+
+        <button type="submit" onclick="handleForm(event)" class="button">
+          Generate My Ticket
+        </button>
       </form>
     </div>
 
@@ -99,7 +110,7 @@
               id="profile-img"
             />
             <div>
-              <h4 class="card-name">Mugisha Buban</h4>
+              <h4 class="card-name" id="Username">Mugisha aki Buban</h4>
               <div class="email">
                 <img src="./assets/images/icon-github.svg" alt="" />
                 <h5>@mugisha004gmail.com</h5>
