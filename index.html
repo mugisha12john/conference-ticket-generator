@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <link
       rel="icon"
       type="image/png"
@@ -14,7 +13,6 @@
     <title>Frontend Mentor | Conference ticket generator</title>
   </head>
   <body>
-    <!-- Form starts -->
     <img
       src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
       alt="pattern-1"
@@ -46,10 +44,16 @@
       </div>
       <form>
         <label for="">Upload Avatar</label>
-        <div class="drag">
-          <div id="img">
+        <div id="dropArea" class="drag">
+          <label id="imgView">
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/png, image/jpg"
+              hidden
+            />
             <img src="./assets/images/icon-upload.svg" alt="" />
-          </div>
+          </label>
           <div id="drag-text"><p>Drag and drop or click to upload</p></div>
         </div>
         <div id="upload-error">
@@ -57,12 +61,18 @@
           <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
         </div>
         <label for="">Full Name</label>
-        <input type="text" />
+        <input type="text" id="name" />
         <label for="">Email Address</label>
-        <input type="email" placeholder="example@email.com" />
+        <input type="email" id="email" placeholder="example@email.com" />
+        <div id="error">
+          <p>Please enter valid email.</p>
+        </div>
         <label for="">GitHub Username</label>
-        <input type="text" placeholder=" @yourusername" />
-        <button>Generate My Ticket</button>
+        <input type="text" id="GitHub" placeholder=" @yourusername" />
+
+        <button type="submit" id="submitBtn" onclick="handleForm(event)" class="button">
+          Generate My Ticket
+        </button>
       </form>
     </div>
 
@@ -98,7 +108,7 @@
               id="profile-img"
             />
             <div>
-              <h4 class="card-name">Mugisha Buban</h4>
+              <h4 class="card-name" id="Username">Mugisha aki Buban</h4>
               <div class="email">
                 <img src="./assets/images/icon-github.svg" alt="" />
                 <h5>@mugisha004gmail.com</h5>
