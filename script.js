@@ -49,11 +49,11 @@ function handleForm(e) {
   e.preventDefault();
   const fullName = document.getElementById("name");
   const email = document.getElementById("email");
-  const github = document.getElementById("GitHub"); // Fix: match HTML id
+  const github = document.getElementById("GitHub");
   const error = document.getElementById("error");
   let hasError = false;
 
-  // Clear previous error styles
+
   email.style.border = "";
   fullName.style.border = "";
   github.style.border = "";
@@ -77,7 +77,7 @@ function handleForm(e) {
     github.style.border = "1px solid red";
     hasError = true;
   }
-  // Basic email validation
+
   if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     error.style.display = "block";
     email.style.border = "1px solid red";
