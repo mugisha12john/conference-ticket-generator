@@ -156,7 +156,7 @@ body {
   background-color: rgba(128, 128, 128, 0.31);
 }
 
-.container form #upload-error{
+.container form #upload-error {
   font-size: 9px;
   display: flex;
   gap: 3px;
@@ -260,6 +260,10 @@ body {
 .card-name {
   position: absolute;
   top: -40px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 16px;
 }
 .email {
   display: flex;

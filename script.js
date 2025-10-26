@@ -129,4 +129,11 @@ function handleForm(e) {
   }
   const code = String(randomIntInclusive(0, 999999)).padStart(6, "0");
   document.querySelector(".code h6").textContent = `#${code}`;
+
+  const currentDate = new Date();
+  const options = { year: "numeric", month: "short", day: "numeric" };
+  const formattedDate = currentDate.toLocaleDateString("en-US", options);
+  document.querySelector(
+    "#date-current"
+  ).textContent = `${formattedDate} / Austin, TX`;
 }
